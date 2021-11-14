@@ -1,0 +1,9 @@
+.nav-link{
+  &:hover, &:active{
+    font-weight: bold;
+  }
+
+  &.active{
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,69 @@
+.logo{
+  width: 44px;
+  height: 33px;
+
+  @media(min-width: 992px) {
+    width: 115px;
+    height: 80px;
+  }
+}
+
+.location-point-{
+  &hover:hover{
+    color: map-get($theme-colors, 'primary');
+  }
+
+  &nav-position{
+    top: 3px;
+    left: 25%;
+
+    @media(min-width: 992px) {
+      top: -10px;
+      left: -24px;
+    }
+  }
+
+  &main-position{
+    top: 25%;
+    left: -18px;
+
+    @media(min-width: 992px) {
+      top: 25%;
+      left: -36px;
+    }
+  }
+}
+
+.bg{
+  width: 100%;
+  height: 420px;
+  background: url(../../img/bg_1.jpg) center top no-repeat;
+  background-size: cover;
+
+  @media(min-width: 992px) {
+    height: auto;
+    background: url(../../img/bg_1.jpg) 0 -80px no-repeat;
+  }
+}
+
+svg{
+  @media(min-width: 992px) {
+    width: 42px;
+    height: 48px;
+  }
+}
+
+.picture-img{
+  height: 240px;
+  object-fit: cover;
+
+  @media(min-width: 992px) {
+    height: 300px;
+  }
+}
+
+.menu-{
+  &hover:hover{
+    color: $white;
+  }
+}

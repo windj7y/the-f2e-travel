@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>樂遊台灣</title>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="style/all.css">
+</head>
+<body>
+  <div id="app">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 py-lg-5 py-xxl-7 ps-3 ps-xl-0">
+      <div class="container justify-content-between justify-content-xl-start">
+        <h1 class="me-xl-17">
+          <a class="font-zen fs-13 fs-lg-5 fs-xxl-3 fw-medium link-primary d-flex align-items-center" href="#">
+            <img src="img/Logo_whale_115.png" alt="logo" class="logo me-xl-2">
+            <span class="ls-lg-2 ls-xxl-4">樂遊台灣</span>
+          </a>
+        </h1>
+        <div class="position-relative d-none d-lg-block">
+          <a accesskey="U" href="#" title="上方選單區" class="font-zen fs-8 fw-bold link-secondary position-absolute location-point-nav-position location-point-hover">:::</a>
+          <ul class="navbar-nav font-zen fs-lg-10 ls-2">
+            <li class="nav-item">
+              <a class="nav-link d-md-flex flex-md-column align-items-md-center px-lg-3 px-xxl-5" href="#">
+                景點
+                <span class="link-success fs-14 ls-1">SCENICSPOT</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-md-flex flex-md-column align-items-md-center px-lg-3 px-xxl-5" href="#">
+                美食
+                <span class="link-success fs-14 ls-1">RESTAURANT</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-md-flex flex-md-column align-items-md-center px-lg-3 px-xxl-5" href="#">
+                交通
+                <span class="link-success fs-14 ls-1">TRAFFIC</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-md-flex flex-md-column align-items-md-center px-lg-3 px-xxl-5" href="#">
+                住宿
+                <span class="link-success fs-14 ls-1">HOTELS</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#navModal">
+          <span class="material-icons text-primary fs-11">menu</span>
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="navModal" tabindex="-1" aria-labelledby="navModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border border-primary border-5 rounded-4">
+              <div class="modal-body px-4 py-5 position-relative">
+                <a accesskey="U" href="#" title="上方選單區" class="font-zen fs-17 fw-bold link-secondary position-absolute location-point-nav-position location-point-hover">:::</a>
+                <button type="button" class="btn-close position-absolute btn-close-position" data-bs-dismiss="modal" aria-label="Close"></button>
+                <ul class="navbar-nav font-zen fs-7 ls-3 flex-row flex-wrap">
+                  <li class="nav-item w-50 mb-9">
+                    <a class="nav-link d-flex flex-column align-items-center" href="#">
+                      景點
+                      <span class="link-success fs-10 ls-2">SCENICSPOT</span>
+                    </a>
+                  </li>
+                  <li class="nav-item w-50 mb-9">
+                    <a class="nav-link d-flex flex-column align-items-center" href="#">
+                      美食
+                      <span class="link-success fs-10 ls-2">RESTAURANT</span>
+                    </a>
+                  </li>
+                  <li class="nav-item w-50">
+                    <a class="nav-link d-flex flex-column align-items-center" href="#">
+                      交通
+                      <span class="link-success fs-10 ls-2">TRAFFIC</span>
+                    </a>
+                  </li>
+                  <li class="nav-item w-50">
+                    <a class="nav-link d-flex flex-column align-items-center" href="#">
+                      住宿
+                      <span class="link-success fs-10 ls-2">HOTELS</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  
+    <div class="bg position-relative">
+      <a accesskey="B" href="#" title="banner" class="font-zen fs-17 fs-lg-8 fw-bold link-white position-absolute top-0 start-0 location-point-hover lh-1">:::</a>
+      <div class="container py-9 pt-lg-13 pb-lg-15">
+        <h2 class="font-zen fs-2 fs-lg-1 fw-medium text-white ls-6 text-center mb-3 mb-lg-0">樂遊台灣</h2>
+        <h3 class="font-zen fs-10 fs-lg-5 fw-black text-white text-center mb-11">TRAVEL AROUND TAIWAN, BE FUN!</h3>
+        <form class="d-none d-lg-block">
+          <div class="row">
+            <div class="offset-lg-2 col-lg-8 mb-7 mb-lg-5">
+              <div class="input-group">
+                <input type="text" class="form-control fs-lg-9 p-lg-3" placeholder="輸入目的地、景點或相關關鍵字">
+                <button class="btn btn-primary" type="button">
+                  <span class="material-icons text-white fs-lg-5 fs-xxl-4 align-middle">search</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-8">
+              <div class="row justify-content-between">
+                <div class="col-lg-3">
+                  <button class="btn btn-white dropdown-toggle fs-lg-9 text-success w-100 p-lg-3" type="button" @click="showMenu('area')">
+                    {{ menu.area }}
+                  </button>
+                </div>
+                <div class="col-lg-3">
+                  <button class="btn btn-white dropdown-toggle fs-lg-9 text-success w-100 p-lg-3" type="button" @click="showMenu('type')">
+                    {{ menu.type }}
+                  </button>
+                </div>
+                <div class="col-lg-3">
+                  <button class="btn btn-white dropdown-toggle fs-lg-9 text-success w-100 p-lg-3" type="button" @click="showMenu('price')">
+                    {{ menu.price }}
+                  </button>
+                </div>
+                <div class="col-lg-auto">
+                  <button class="btn btn-primary p-lg-3" type="button" id="button-addon2">
+                    <span class="material-icons text-white fs-lg-5 align-middle">pin_drop</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <form class="d-lg-none">
+          <div class="d-flex justify-content-center mb-7">
+            <input type="text" class="form-control w-2 fs-11 p-2 me-2" id="formGroupExampleInput" placeholder="輸入相關關鍵字">
+            <button class="btn btn-primary p-2" type="button">
+              <span class="material-icons text-white align-middle">search</span>
+            </button>
+          </div>
+          <div class="d-flex justify-content-center mb-7">
+            <input type="text" class="form-control w-2 fs-11 p-2 me-2" id="formGroupExampleInput" placeholder="依地區、類別或價格篩選">
+            <button class="btn btn-primary p-2" type="button">
+              <span class="material-icons text-white align-middle">pin_drop</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    <div class="collapse" ref="area">
+      <div class="bg-light pt-9 d-none d-lg-block">
+        <div class="container">
+          <a type="button" class="btn btn-outline-primary link-primary menu-hover rounded-pill fs-8 w-1 mx-4 mb-4" v-for="(item, key) in cityData" :key="key" @click.prevent="updateMenu('area', key)">{{ item.CityName }}</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="collapse" ref="type">
+      <div class="bg-light pt-9 d-none d-lg-block">
+        <div class="container">
+          <a type="button" class="btn btn-outline-primary link-primary menu-hover rounded-pill fs-8 w-1 mx-4 mb-4" v-for="(item, key) in typeData" :key="key" @click.prevent="updateMenu('type', key)" :class="{ 'w-auto': item.length > 4 }" >{{ item }}</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="collapse" ref="price">
+      <div class="bg-light pt-9 d-none d-lg-block">
+        <div class="container">
+          <p class="fs-lg-8 text-primary text-center">暫無資料</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="bg-light px-6 py-12 px-xl-0 pb-xl-18">
+      <div class="container">
+        <h3 class="font-zen fs-12 fs-lg-7 text-primary mb-4 mb-xl-12 position-relative">
+          <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              width="13px" height="15px" fill="#00A7BA" viewBox="0 0 34.017 34.016" enable-background="new 0 0 34.017 34.016" xml:space="preserve">
+              <g> 
+                <path d="M30.133,12.994l-4.65,17.001c-0.449,1.449-4.299,2.699-9.1,2.699s-5.801-1.299-6.301-2.65l-6.4-16.45
+                  c-0.301-0.75-0.199-2.051,0.1-2.701l2.602-5.099c0.25-0.65,1.199-1.35,2-1.551l6.15-1.5c0.35-0.049,2.148-0.6,4.049-0.6
+                  c1.102,0,1.25,0.1,4.301,0.75c0.801,0.15,1.801,0.9,2.25,1.551c0.951,1.1,3.65,4.5,4.451,5.849
+                  C30.232,11.293,30.283,12.193,30.133,12.994z M24.033,29.694c0-0.449-1.9-1.699-5.1-1.699c-3.852,0-7.051,1.5-7.051,2.15
+                  c0,0.898,2.449,1.549,4.85,1.549C20.383,31.694,24.033,30.544,24.033,29.694z"/>
+              </g>
+          </svg>
+          <span class="align-middle">景點 ScenicSpot</span>
+          <a accesskey="C" href="#" title="主要內容區" class="font-zen fs-17 fs-lg-8 fw-bold link-primary position-absolute location-point-main-position location-point-hover lh-1">:::</a>
+        </h3>
+        <div class="position-relative mb-7 mb-xl-16">
+          <div class="swiper">
+            <ul class="swiper-wrapper list-unstyled">
+              <li class="swiper-slide" v-for="item in scenicSpots" :key="item.ID">
+                <div class="card">
+                  <a href="#" @click.prevent="getScenicSpot(item.ID)">
+                    <img :src="item.Picture.PictureUrl1" class="card-img-top picture-img" :alt="item.Name">
+                    <div class="card-body p-xl-4">
+                      <h4 class="card-title fs-lg-6 fw-bold mb-3 ellipsis">{{ item.Name }}</h4>
+                      <ul class="list-unstyled text-justify">
+                        <li class="d-flex mb-2">
+                          <span class="material-icons fs-lg-9 pt-lg-2 me-2">query_builder</span>
+                          <p class="fs-lg-8 ellipsis">{{ item.OpenTime }}</p>
+                        </li>
+                        <li class="d-flex mb-2">
+                          <span class="material-icons fs-lg-9 pt-lg-2 me-2">call</span>
+                          <p class="fs-lg-8 ellipsis">{{ item.Phone }}</p>
+                        </li>
+                        <li class="d-flex mb-2">
+                          <span class="material-icons fs-lg-9 pt-lg-2 me-2">place</span>
+                          <p class="fs-lg-8 ellipsis-multi-line">{{ item.Address }}</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                </div>
+              </li>
+            </ul>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+        <h3 class="font-zen fs-12 fs-lg-7 text-primary mb-4 mb-xl-12">
+          <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              width="13px" height="15px" fill="#00A7BA" viewBox="0 0 34.017 34.016" enable-background="new 0 0 34.017 34.016" xml:space="preserve">
+              <g>
+                <path d="M30.133,12.994l-4.65,17.001c-0.449,1.449-4.299,2.699-9.1,2.699s-5.801-1.299-6.301-2.65l-6.4-16.45
+                  c-0.301-0.75-0.199-2.051,0.1-2.701l2.602-5.099c0.25-0.65,1.199-1.35,2-1.551l6.15-1.5c0.35-0.049,2.148-0.6,4.049-0.6
+                  c1.102,0,1.25,0.1,4.301,0.75c0.801,0.15,1.801,0.9,2.25,1.551c0.951,1.1,3.65,4.5,4.451,5.849
+                  C30.232,11.293,30.283,12.193,30.133,12.994z M24.033,29.694c0-0.449-1.9-1.699-5.1-1.699c-3.852,0-7.051,1.5-7.051,2.15
+                  c0,0.898,2.449,1.549,4.85,1.549C20.383,31.694,24.033,30.544,24.033,29.694z"/>
+              </g>
+          </svg>
+          <span class="align-middle">美食 Restaurant</span>
+        </h3>
+        <div class="position-relative">
+          <div class="swiper">
+            <ul class="swiper-wrapper list-unstyled">
+              <li class="swiper-slide" v-for="item in restaurants" :key="item.ID">
+                <div class="card">
+                  <a href="#" @click.prevent="getRestaurant(item.ID)">
+                    <img :src="item.Picture.PictureUrl1" class="card-img-top picture-img" :alt="item.Name">
+                    <div class="card-body p-xl-4">
+                      <h4 class="card-title fs-lg-6 fw-bold mb-3 ellipsis">{{ item.Name }}</h4>
+                      <ul class="list-unstyled text-justify">
+                        <li class="d-flex mb-2">
+                          <span class="material-icons fs-lg-9 pt-lg-2 me-2">query_builder</span>
+                          <p class="fs-lg-8 ellipsis">{{ item.OpenTime }}</p>
+                        </li>
+                        <li class="d-flex mb-2">
+                          <span class="material-icons fs-lg-9 pt-lg-2 me-2">call</span>
+                          <p class="fs-lg-8 ellipsis">{{ item.Phone }}</p>
+                        </li>
+                        <li class="d-flex mb-2">
+                          <span class="material-icons fs-lg-9 pt-lg-2 me-2">place</span>
+                          <p class="fs-lg-8 ellipsis-multi-line">{{ item.Address }}</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </a>
+                </div>
+              </li>
+            </ul>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-primary">
+      <p class="font-zen fs-16 fs-lg-8 text-white text-center py-2 py-lg-5 py-xl-10">
+        Ⓒ By Yu Tsai-Heng
+      </p>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" tabindex="-1" aria-labelledby="scenicSpotModalLabel" aria-hidden="true" ref="scenicSpotModal">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content border border-primary border-6 rounded-6">
+          <div class="modal-body position-relative bg-light">
+            <button type="button" class="btn-close position-absolute btn-close-position" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="container text-secondary py-7 py-lg-12">
+              <div class="row mb-4 mb-lg-9">
+                <div class="col-xl-6 mb-3 mb-xl-0">
+                  <img :src="scenicSpot.Picture.PictureUrl1" :alt="scenicSpot.Name" class="rounded-6 w-100">
+                </div>
+                <div class="col">
+                  <h2 class="fs-6 fw-bold mb-3">{{ scenicSpot.Name }}</h2>
+                  <ul class="list-unstyled">
+                    <li class="d-flex mb-2 ">
+                      <span class="material-icons fs-lg-9 pt-lg-2 me-2">query_builder</span>
+                      <p class="fs-lg-8">{{ scenicSpot.OpenTime }}</p>
+                    </li>
+                    <li class="d-flex mb-2">
+                      <span class="material-icons fs-lg-9 pt-lg-2 me-2">call</span>
+                      <p class="fs-lg-8">{{ scenicSpot.Phone }}</p>
+                    </li>
+                    <li class="d-flex mb-2">
+                      <span class="material-icons fs-lg-9 pt-lg-2 me-2">place</span>
+                      <p class="fs-lg-8">{{ scenicSpot.Address }}</p>
+                    </li>
+                    <li class="d-flex mb-3" v-if="scenicSpot.TravelInfo">
+                      <span class="material-icons fs-lg-9 pt-lg-2 me-2">directions_car</span>
+                      <p class="fs-lg-8 ellipsis-multi-line">
+                        {{ scenicSpot.TravelInfo }}
+                      </p>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <span class="badge rounded-pill text-primary border border-2 border-primary fs-lg-9 me-3">{{ scenicSpot.Class1 }}</span>
+                      <span class="badge rounded-pill text-primary border border-2 border-primary fs-lg-9 me-3">{{ scenicSpot.Class2 }}</span>
+                      <span class="badge rounded-pill text-primary border border-2 border-primary fs-lg-9">{{ scenicSpot.Class3 }}</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p class="fs-lg-8 text-justify ls-2 mb-4 mb-lg-12">
+                {{ scenicSpot.Description }}
+              </p>
+              <h3 class="font-zen fs-12 fs-lg-7 text-primary mb-4 mb-lg-12 position-relative">
+                <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:lgink="http://www.w3.org/1999/lgink" x="0px" y="0px"
+                    width="13px" height="15px" fill="#00A7BA" viewBox="0 0 34.017 34.016" enable-background="new 0 0 34.017 34.016" xml:space="preserve">
+                    <g> 
+                      <path d="M30.133,12.994l-4.65,17.001c-0.449,1.449-4.299,2.699-9.1,2.699s-5.801-1.299-6.301-2.65l-6.4-16.45
+                        c-0.301-0.75-0.199-2.051,0.1-2.701l2.602-5.099c0.25-0.65,1.199-1.35,2-1.551l6.15-1.5c0.35-0.049,2.148-0.6,4.049-0.6
+                        c1.102,0,1.25,0.1,4.301,0.75c0.801,0.15,1.801,0.9,2.25,1.551c0.951,1.1,3.65,4.5,4.451,5.849
+                        C30.232,11.293,30.283,12.193,30.133,12.994z M24.033,29.694c0-0.449-1.9-1.699-5.1-1.699c-3.852,0-7.051,1.5-7.051,2.15
+                        c0,0.898,2.449,1.549,4.85,1.549C20.383,31.694,24.033,30.544,24.033,29.694z"/>
+                    </g>
+                </svg>
+                <span class="align-middle">附近美食 Restaurant</span>
+              </h3>
+              <ul class="list-unstyled row mb-4 mb-lg-9" v-if="nearby.restaurants.length">
+                <li class="col-lg-6 mb-5" v-for="item in nearby.restaurants" :key="item.ID">
+                  <div class="card">
+                    <img :src="item.Picture.PictureUrl1" class="card-img-top picture-img" :alt="item.Name">
+                    <div class="card-body p-xl-4">
+                      <h4 class="card-title fs-lg-6 fw-bold mb-3 ellipsis">{{ item.Name }}</h4>
+                      <ul class="list-unstyled text-justify">
+                        <li class="d-flex mb-2">
+                          <span class="material-icons fs-lg-9 pt-lg-2 me-2">query_builder</span>
+                          <p class="fs-lg-8 ellipsis">{{ item.OpenTime }}</p>
+                        </li>
+                        <li class="d-flex mb-2">
+                          <span class="material-icons fs-lg-9 pt-lg-2 me-2">call</span>
+                          <p class="fs-lg-8 ellipsis">{{ item.Phone }}</p>
+                        </li>
+                        <li class="d-flex mb-2">
+                          <span class="material-icons fs-lg-9 pt-lg-2 me-2">place</span>
+                          <p class="fs-lg-8 ellipsis-multi-line">{{ item.Address }}</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <p class="fs-lg-8 text-center mb-4 mb-lg-12" v-else>暫無資料</p>
+              <h3 class="font-zen fs-12 fs-lg-7 text-primary mb-4 mb-lg-12 position-relative">
+                <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:lgink="http://www.w3.org/1999/lgink" x="0px" y="0px"
+                    width="13px" height="15px" fill="#00A7BA" viewBox="0 0 34.017 34.016" enable-background="new 0 0 34.017 34.016" xml:space="preserve">
+                    <g> 
+                      <path d="M30.133,12.994l-4.65,17.001c-0.449,1.449-4.299,2.699-9.1,2.699s-5.801-1.299-6.301-2.65l-6.4-16.45
+                        c-0.301-0.75-0.199-2.051,0.1-2.701l2.602-5.099c0.25-0.65,1.199-1.35,2-1.551l6.15-1.5c0.35-0.049,2.148-0.6,4.049-0.6
+                        c1.102,0,1.25,0.1,4.301,0.75c0.801,0.15,1.801,0.9,2.25,1.551c0.951,1.1,3.65,4.5,4.451,5.849
+                        C30.232,11.293,30.283,12.193,30.133,12.994z M24.033,29.694c0-0.449-1.9-1.699-5.1-1.699c-3.852,0-7.051,1.5-7.051,2.15
+                        c0,0.898,2.449,1.549,4.85,1.549C20.383,31.694,24.033,30.544,24.033,29.694z"/>
+                    </g>
+                </svg>
+                <span class="align-middle">附近住宿 Hotels</span>
+              </h3>
+              <ul class="list-unstyled row" v-if="nearby.hotels.length">
+                <li class="col-lg-6 mb-5" v-for="item in nearby.hotels" :key="item.ID">
+                  <div class="card">
+                    <img :src="item.Picture.PictureUrl1" class="card-img-top picture-img" :alt="item.Name">
+                    <div class="card-body p-xl-4">
+                      <h4 class="card-title fs-lg-6 fw-bold mb-3 ellipsis">{{ item.Name }}</h4>
+                      <ul class="list-unstyled text-justify">
+                        <li class="d-flex mb-2">
+                          <span class="material-icons fs-lg-9 pt-lg-2 me-2">call</span>
+                          <p class="fs-lg-8 ellipsis">{{ item.Phone }}</p>
+                        </li>
+                        <li class="d-flex mb-2">
+                          <span class="material-icons fs-lg-9 pt-lg-2 me-2">place</span>
+                          <p class="fs-lg-8 ellipsis-multi-line">{{ item.Address }}</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <p class="fs-lg-8 text-center" v-else>暫無資料</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" tabindex="-1" aria-labelledby="restaurantModalLabel" aria-hidden="true" ref="restaurantModal">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content border border-primary border-6 rounded-6">
+          <div class="modal-body position-relative bg-light">
+            <button type="button" class="btn-close position-absolute btn-close-position" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="container text-secondary py-7 py-lg-12">
+              <div class="row mb-4 mb-lg-9">
+                <div class="col-xl-6 mb-3 mb-xl-0">
+                  <img :src="restaurant.Picture.PictureUrl1" :alt="restaurant.Name" class="rounded-6 w-100">
+                </div>
+                <div class="col">
+                  <h2 class="fs-6 fw-bold mb-3">{{ restaurant.Name }}</h2>
+                  <ul class="list-unstyled">
+                    <li class="d-flex mb-2 ">
+                      <span class="material-icons fs-lg-9 pt-lg-2 me-2">query_builder</span>
+                      <p class="fs-lg-8">{{ restaurant.OpenTime }}</p>
+                    </li>
+                    <li class="d-flex mb-2">
+                      <span class="material-icons fs-lg-9 pt-lg-2 me-2">call</span>
+                      <p class="fs-lg-8">{{ restaurant.Phone }}</p>
+                    </li>
+                    <li class="d-flex mb-3">
+                      <span class="material-icons fs-lg-9 pt-lg-2 me-2">place</span>
+                      <p class="fs-lg-8">{{ restaurant.Address }}</p>
+                    </li>
+                    <li>
+                      <span class="badge rounded-pill text-primary border border-2 border-primary fs-lg-8 me-3">{{ restaurant.Class }}</span>
+                    </li>                    
+                  </ul>
+                </div>
+              </div>
+              <p class="fs-lg-8 text-justify ls-2 mb-4 mb-lg-12">
+                {{ restaurant.Description }}
+              </p>
+              <h3 class="font-zen fs-12 fs-lg-7 text-primary mb-4 mb-lg-12 position-relative">
+                <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:lgink="http://www.w3.org/1999/lgink" x="0px" y="0px"
+                    width="13px" height="15px" fill="#00A7BA" viewBox="0 0 34.017 34.016" enable-background="new 0 0 34.017 34.016" xml:space="preserve">
+                    <g> 
+                      <path d="M30.133,12.994l-4.65,17.001c-0.449,1.449-4.299,2.699-9.1,2.699s-5.801-1.299-6.301-2.65l-6.4-16.45
+                        c-0.301-0.75-0.199-2.051,0.1-2.701l2.602-5.099c0.25-0.65,1.199-1.35,2-1.551l6.15-1.5c0.35-0.049,2.148-0.6,4.049-0.6
+                        c1.102,0,1.25,0.1,4.301,0.75c0.801,0.15,1.801,0.9,2.25,1.551c0.951,1.1,3.65,4.5,4.451,5.849
+                        C30.232,11.293,30.283,12.193,30.133,12.994z M24.033,29.694c0-0.449-1.9-1.699-5.1-1.699c-3.852,0-7.051,1.5-7.051,2.15
+                        c0,0.898,2.449,1.549,4.85,1.549C20.383,31.694,24.033,30.544,24.033,29.694z"/>
+                    </g>
+                </svg>
+                <span class="align-middle">附近景點 ScenicSpot</span>
+              </h3>
+              <ul class="list-unstyled row mb-4 mb-lg-9" v-if="nearby.scenicSpots.length">
+                <li class="col-lg-6 mb-5" v-for="item in nearby.scenicSpots" :key="item.ID">
+                  <div class="card">
+                    <img :src="item.Picture.PictureUrl1" class="card-img-top picture-img" :alt="item.Name">
+                    <div class="card-body p-xl-4">
+                      <h4 class="card-title fs-lg-6 fw-bold mb-3 ellipsis">{{ item.Name }}</h4>
+                      <ul class="list-unstyled text-justify">
+                        <li class="d-flex mb-2">
+                          <span class="material-icons fs-lg-9 pt-lg-2 me-2">query_builder</span>
+                          <p class="fs-lg-8 ellipsis">{{ item.OpenTime }}</p>
+                        </li>
+                        <li class="d-flex mb-2">
+                          <span class="material-icons fs-lg-9 pt-lg-2 me-2">call</span>
+                          <p class="fs-lg-8 ellipsis">{{ item.Phone }}</p>
+                        </li>
+                        <li class="d-flex mb-2">
+                          <span class="material-icons fs-lg-9 pt-lg-2 me-2">place</span>
+                          <p class="fs-lg-8 ellipsis-multi-line">{{ item.Address }}</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <p class="fs-lg-8 text-center mb-4 mb-lg-12" v-else>暫無資料</p>
+              <h3 class="font-zen fs-12 fs-lg-7 text-primary mb-4 mb-lg-12 position-relative">
+                <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:lgink="http://www.w3.org/1999/lgink" x="0px" y="0px"
+                    width="13px" height="15px" fill="#00A7BA" viewBox="0 0 34.017 34.016" enable-background="new 0 0 34.017 34.016" xml:space="preserve">
+                    <g> 
+                      <path d="M30.133,12.994l-4.65,17.001c-0.449,1.449-4.299,2.699-9.1,2.699s-5.801-1.299-6.301-2.65l-6.4-16.45
+                        c-0.301-0.75-0.199-2.051,0.1-2.701l2.602-5.099c0.25-0.65,1.199-1.35,2-1.551l6.15-1.5c0.35-0.049,2.148-0.6,4.049-0.6
+                        c1.102,0,1.25,0.1,4.301,0.75c0.801,0.15,1.801,0.9,2.25,1.551c0.951,1.1,3.65,4.5,4.451,5.849
+                        C30.232,11.293,30.283,12.193,30.133,12.994z M24.033,29.694c0-0.449-1.9-1.699-5.1-1.699c-3.852,0-7.051,1.5-7.051,2.15
+                        c0,0.898,2.449,1.549,4.85,1.549C20.383,31.694,24.033,30.544,24.033,29.694z"/>
+                    </g>
+                </svg>
+                <span class="align-middle">附近住宿 Hotels</span>
+              </h3>
+              <ul class="list-unstyled row" v-if="nearby.hotels.length">
+                <li class="col-lg-6 mb-5" v-for="item in nearby.hotels" :key="item.ID">
+                  <div class="card">
+                    <img :src="item.Picture.PictureUrl1" class="card-img-top picture-img" :alt="item.Name">
+                    <div class="card-body p-xl-4">
+                      <h4 class="card-title fs-lg-6 fw-bold mb-3 ellipsis">{{ item.Name }}</h4>
+                      <ul class="list-unstyled text-justify">
+                        <li class="d-flex mb-2">
+                          <span class="material-icons fs-lg-9 pt-lg-2 me-2">call</span>
+                          <p class="fs-lg-8 ellipsis">{{ item.Phone }}</p>
+                        </li>
+                        <li class="d-flex mb-2">
+                          <span class="material-icons fs-lg-9 pt-lg-2 me-2">place</span>
+                          <p class="fs-lg-8 ellipsis-multi-line">{{ item.Address }}</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <p class="fs-lg-8 text-center" v-else>暫無資料</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.2.0/sha.js"></script>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="js/all.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+.swiper-button-{
+  &next{
+    color: map-get($theme-colors, 'success');
+    right: -45px;
+  
+    @media(min-width: 992px) {
+      padding-right: -30px;
+    }
+  }
+
+  &prev{
+    color: map-get($theme-colors, 'success');
+    left: -45px;
+  
+    @media(min-width: 992px) {
+      padding-left: -30px;
+    }
+  }
+}
+
+.swiper{
+  position: static;
+
+  @media(min-width: 992px) {
+    padding-left: 16px; 
+    padding-right: 16px;
+  }
+}

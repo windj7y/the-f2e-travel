@@ -1,0 +1,13 @@
+@import '../node_modules/bootstrap/scss/functions';
+@import './helpers/variables';
+@import './helpers/utilities';
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+@import 'base/base';
+@import 'helpers/swiper';
+@import 'components/close';
+@import 'components/modal';
+@import 'components/navbar';
+@import 'utilities/text';
+
+@import 'page/index';
