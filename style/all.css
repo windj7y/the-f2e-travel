@@ -10784,6 +10784,11 @@ fieldset:disabled .btn {
   border-top-right-radius: 0.25rem !important;
 }
 
+.rounded-top-5 {
+  border-top-left-radius: 0.625rem !important;
+  border-top-right-radius: 0.625rem !important;
+}
+
 .rounded-end {
   border-top-right-radius: 0.25rem !important;
   border-bottom-right-radius: 0.25rem !important;
@@ -17821,6 +17826,13 @@ p, ul {
   height: 240px;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.picture-img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 @media (min-width: 992px) {

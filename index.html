@@ -112,17 +112,17 @@
             <div class="offset-lg-2 col-lg-8">
               <div class="row justify-content-between">
                 <div class="col-lg-3">
-                  <button class="btn btn-white dropdown-toggle fs-lg-9 text-success w-100 p-lg-3" type="button" @click="showMenu('area')">
+                  <button class="btn btn-white dropdown-toggle fs-lg-9 text-success w-100 p-lg-3" type="button" @click="toggleMenu('area')">
                     {{ menu.area }}
                   </button>
                 </div>
                 <div class="col-lg-3">
-                  <button class="btn btn-white dropdown-toggle fs-lg-9 text-success w-100 p-lg-3" type="button" @click="showMenu('type')">
+                  <button class="btn btn-white dropdown-toggle fs-lg-9 text-success w-100 p-lg-3" type="button" @click="toggleMenu('type')">
                     {{ menu.type }}
                   </button>
                 </div>
                 <div class="col-lg-3">
-                  <button class="btn btn-white dropdown-toggle fs-lg-9 text-success w-100 p-lg-3" type="button" @click="showMenu('price')">
+                  <button class="btn btn-white dropdown-toggle fs-lg-9 text-success w-100 p-lg-3" type="button" @click="toggleMenu('price')">
                     {{ menu.price }}
                   </button>
                 </div>
@@ -198,7 +198,9 @@
               <li class="swiper-slide" v-for="item in scenicSpots" :key="item.ID">
                 <div class="card">
                   <a href="#" @click.prevent="getScenicSpot(item.ID)">
-                    <img :src="item.Picture.PictureUrl1" class="card-img-top picture-img" :alt="item.Name">
+                    <div class="overflow-hidden rounded-top rounded-top-5">
+                      <img :src="item.Picture.PictureUrl1" class="card-img-top picture-img" :alt="item.Name">
+                    </div>
                     <div class="card-body p-xl-4">
                       <h4 class="card-title fs-lg-6 fw-bold mb-3 ellipsis">{{ item.Name }}</h4>
                       <ul class="list-unstyled text-justify">
@@ -243,7 +245,9 @@
               <li class="swiper-slide" v-for="item in restaurants" :key="item.ID">
                 <div class="card">
                   <a href="#" @click.prevent="getRestaurant(item.ID)">
-                    <img :src="item.Picture.PictureUrl1" class="card-img-top picture-img" :alt="item.Name">
+                    <div class="overflow-hidden rounded-top rounded-top-5">
+                      <img :src="item.Picture.PictureUrl1" class="card-img-top picture-img" :alt="item.Name">
+                    </div>
                     <div class="card-body p-xl-4">
                       <h4 class="card-title fs-lg-6 fw-bold mb-3 ellipsis">{{ item.Name }}</h4>
                       <ul class="list-unstyled text-justify">
@@ -337,7 +341,9 @@
               <ul class="list-unstyled row mb-4 mb-lg-9" v-if="nearby.restaurants.length">
                 <li class="col-lg-6 mb-5" v-for="item in nearby.restaurants" :key="item.ID">
                   <div class="card">
-                    <img :src="item.Picture.PictureUrl1" class="card-img-top picture-img" :alt="item.Name">
+                    <div class="overflow-hidden rounded-top rounded-top-5">
+                      <img :src="item.Picture.PictureUrl1" class="card-img-top picture-img" :alt="item.Name">
+                    </div>
                     <div class="card-body p-xl-4">
                       <h4 class="card-title fs-lg-6 fw-bold mb-3 ellipsis">{{ item.Name }}</h4>
                       <ul class="list-unstyled text-justify">
@@ -375,7 +381,9 @@
               <ul class="list-unstyled row" v-if="nearby.hotels.length">
                 <li class="col-lg-6 mb-5" v-for="item in nearby.hotels" :key="item.ID">
                   <div class="card">
-                    <img :src="item.Picture.PictureUrl1" class="card-img-top picture-img" :alt="item.Name">
+                    <div class="overflow-hidden rounded-top rounded-top-5">
+                      <img :src="item.Picture.PictureUrl1" class="card-img-top picture-img" :alt="item.Name">
+                    </div>
                     <div class="card-body p-xl-4">
                       <h4 class="card-title fs-lg-6 fw-bold mb-3 ellipsis">{{ item.Name }}</h4>
                       <ul class="list-unstyled text-justify">
@@ -449,7 +457,9 @@
               <ul class="list-unstyled row mb-4 mb-lg-9" v-if="nearby.scenicSpots.length">
                 <li class="col-lg-6 mb-5" v-for="item in nearby.scenicSpots" :key="item.ID">
                   <div class="card">
-                    <img :src="item.Picture.PictureUrl1" class="card-img-top picture-img" :alt="item.Name">
+                    <div class="overflow-hidden rounded-top rounded-top-5">
+                      <img :src="item.Picture.PictureUrl1" class="card-img-top picture-img" :alt="item.Name">
+                    </div>
                     <div class="card-body p-xl-4">
                       <h4 class="card-title fs-lg-6 fw-bold mb-3 ellipsis">{{ item.Name }}</h4>
                       <ul class="list-unstyled text-justify">
@@ -487,7 +497,9 @@
               <ul class="list-unstyled row" v-if="nearby.hotels.length">
                 <li class="col-lg-6 mb-5" v-for="item in nearby.hotels" :key="item.ID">
                   <div class="card">
-                    <img :src="item.Picture.PictureUrl1" class="card-img-top picture-img" :alt="item.Name">
+                    <div class="overflow-hidden rounded-top rounded-top-5">
+                      <img :src="item.Picture.PictureUrl1" class="card-img-top picture-img" :alt="item.Name">
+                    </div>
                     <div class="card-body p-xl-4">
                       <h4 class="card-title fs-lg-6 fw-bold mb-3 ellipsis">{{ item.Name }}</h4>
                       <ul class="list-unstyled text-justify">

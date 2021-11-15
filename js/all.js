@@ -53,13 +53,13 @@ const app = {
       return { 'Authorization': Authorization, 'X-Date': GMTString };
     },
     getScenicSpots() {
-      const url = `${this.api.path}/ScenicSpot?$top=${this.api.top}`;
+      const url = `${this.api.path}/ScenicSpot?$filter=Picture/PictureUrl1 ne null &$top=${this.api.top}`;
 
       axios.get(url, {
         headers: this.getAuthorizationHeader()
       })
       .then((res) => {
-        this.scenicSpots = res.data.filter((item) => item.Picture.PictureUrl1 !== undefined);
+        this.scenicSpots = res.data;
       })
       .catch((err) => {
         console.log(err);
@@ -84,13 +84,13 @@ const app = {
       })
     },
     getRestaurants() {
-      const url = `${this.api.path}/Restaurant?$top=${this.api.top}`;
+      const url = `${this.api.path}/Restaurant?$filter=Picture/PictureUrl1 ne null &$top=${this.api.top}`;
 
       axios.get(url, {
         headers: this.getAuthorizationHeader()
       })
       .then((res) => {
-        this.restaurants = res.data.filter((item) => item.Picture.PictureUrl1 !== undefined);
+        this.restaurants = res.data;
       })
       .catch((err) => {
         console.log(err);
@@ -115,39 +115,39 @@ const app = {
       })
     },
     getNearbyScenicSpots(longitude, latitude)  {
-      const url = `${this.api.path}/ScenicSpot?$spatialFilter=nearby(${latitude}, ${longitude}, 500)`;
+      const url = `${this.api.path}/ScenicSpot?$filter=Picture/PictureUrl1 ne null &$spatialFilter=nearby(${latitude}, ${longitude}, 500)`;
 
       axios.get(url, {
         headers: this.getAuthorizationHeader()
       })
       .then((res) => {
-        this.nearby.scenicSpots = res.data.filter((item) => item.Picture.PictureUrl1 !== undefined);
+        this.nearby.scenicSpots = res.data;
       })
       .catch((err) => {
         console.log(err);
       })
     },
     getNearbyRestaurants(longitude, latitude)  {
-      const url = `${this.api.path}/Restaurant?$spatialFilter=nearby(${latitude}, ${longitude}, 500)`;
+      const url = `${this.api.path}/Restaurant?$filter=Picture/PictureUrl1 ne null &$spatialFilter=nearby(${latitude}, ${longitude}, 500)`;
 
       axios.get(url, {
         headers: this.getAuthorizationHeader()
       })
       .then((res) => {
-        this.nearby.restaurants = res.data.filter((item) => item.Picture.PictureUrl1 !== undefined);
+        this.nearby.restaurants = res.data;
       })
       .catch((err) => {
         console.log(err);
       })
     },
     getNearbyHotels(longitude, latitude)  {
-      const url = `${this.api.path}/Hotel?$spatialFilter=nearby(${latitude}, ${longitude}, 500)`;
+      const url = `${this.api.path}/Hotel?$filter=Picture/PictureUrl1 ne null &$spatialFilter=nearby(${latitude}, ${longitude}, 500)`;
 
       axios.get(url, {
         headers: this.getAuthorizationHeader()
       })
       .then((res) => {
-        this.nearby.hotels = res.data.filter((item) => item.Picture.PictureUrl1 !== undefined);
+        this.nearby.hotels = res.data;
       })
       .catch((err) => {
         console.log(err);
@@ -166,7 +166,7 @@ const app = {
         console.log(err);
       })
     },
-    showMenu(item) {
+    toggleMenu(item) {
       const collapse = new bootstrap.Collapse(this.$refs[item]);
       collapse.toggle();
     },
@@ -175,18 +175,13 @@ const app = {
         case 'area':
           this.menu.area = this.cityData[key].CityName;
           this.search.area.push(this.cityData[key]);
-
-          const area = new bootstrap.Collapse(this.$refs.area);
-          area.hide();
           break;
         case 'type':
           this.menu.type = this.typeData[key];
           this.search.type.push(this.typeData[key]);
-
-          const type = new bootstrap.Collapse(this.$refs.type);
-          type.hide();
           break;
       }
+      this.toggleMenu(kind);
     },
     swiperInit() {
       const swiper = new Swiper('.swiper', {

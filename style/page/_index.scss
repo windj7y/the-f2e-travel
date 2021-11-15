@@ -56,6 +56,11 @@ svg{
 .picture-img{
   height: 240px;
   object-fit: cover;
+  transition: all 1s ease-out;
+
+  &:hover{
+    transform: scale(1.2);
+  }
 
   @media(min-width: 992px) {
     height: 300px;
